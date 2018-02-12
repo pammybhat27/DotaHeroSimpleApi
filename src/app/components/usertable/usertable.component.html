@@ -1,0 +1,34 @@
+<div>
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="ID">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let DotaHero"> {{DotaHero.id}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let DotaHero">{{DotaHero.name}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Localizedname">
+      <mat-header-cell *matHeaderCellDef> Localized Name </mat-header-cell>
+      <mat-cell *matCellDef="let DotaHero"> {{DotaHero.localized_name}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Primary Attribute">
+      <mat-header-cell *matHeaderCellDef> Primary Attribute </mat-header-cell>
+      <mat-cell *matCellDef="let DotaHero"> {{ DotaHero.primary_attr}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Attack Type">
+      <mat-header-cell *matHeaderCellDef> Attack Type </mat-header-cell>
+      <mat-cell *matCellDef="let DotaHero"> {{ DotaHero.attack_type}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Legs">
+      <mat-header-cell *matHeaderCellDef> Legs </mat-header-cell>
+      <mat-cell *matCellDef="let DotaHero"> {{ DotaHero.legs}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Roles">
+      <mat-header-cell *matHeaderCellDef> Roles </mat-header-cell>
+      <mat-cell *matCellDef="let DotaHero"> {{ DotaHero.roles}}  </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
