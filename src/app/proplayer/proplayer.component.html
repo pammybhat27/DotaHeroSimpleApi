@@ -1,0 +1,37 @@
+
+
+
+<div>
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="Account_id">
+      <mat-header-cell *matHeaderCellDef> Account ID </mat-header-cell>
+      <mat-cell *matCellDef="let DotaProPlayerModel"> {{DotaProPlayerModel.account_id}}" </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="avatar">
+      <mat-header-cell *matHeaderCellDef> Avatar </mat-header-cell>
+      <mat-cell *matCellDef="let DotaProPlayerModel"><img src ="{{DotaProPlayerModel.avatar}}" /> </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="profileurl">
+      <mat-header-cell *matHeaderCellDef> Profile url </mat-header-cell>
+      <mat-cell *matCellDef="let DotaProPlayerModel"> {{DotaProPlayerModel.profileurl}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="personaname">
+      <mat-header-cell *matHeaderCellDef> personaname </mat-header-cell>
+      <mat-cell *matCellDef="let DotaProPlayerModel"> {{ DotaProPlayerModel.personaname}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> name </mat-header-cell>
+      <mat-cell *matCellDef="let DotaProPlayerModel"> {{ DotaProPlayerModel.name}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="country_code">
+      <mat-header-cell *matHeaderCellDef> country_code </mat-header-cell>
+      <mat-cell *matCellDef="let DotaProPlayerModel"> {{ DotaProPlayerModel.country_code}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="team_name">
+      <mat-header-cell *matHeaderCellDef> team_name </mat-header-cell>
+      <mat-cell *matCellDef="let DotaProPlayerModel"> {{ DotaProPlayerModel.team_name}}  </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

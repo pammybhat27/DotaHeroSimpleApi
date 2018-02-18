@@ -4,23 +4,36 @@ import { MatTableModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { UsertableComponent } from './components/usertable/usertable.component';
+import { HeroFetcherComponent } from './components/herofetcher/herofetcher.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DotaUserService} from './services/dota-user.service';
+import {DotaHeroFetcherService} from './services/dota-heroFetcher.service';
+import { RouterModule, Routes  } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import {routes} from './app.routes';
+import {PlayerInfoServiceService} from './services/player-info-service.service';
+import {PlayerinfoComponent} from './playerinfo/playerinfo.component';
+import {DotaPlayerInfoModel} from './model/dotaPlayerInfo.model';
+import {ProplayerService} from './services/proplayer.service';
+import {ProplayerComponent} from './proplayer/proplayer.component';
+
+@NgModule(<NgModule>{
+  declarations: [AppComponent,
+    HeroFetcherComponent,
+    HomeComponent,
+    PlayerinfoComponent,
+    ProplayerComponent
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    UsertableComponent
   ],
-  imports: [
-    BrowserModule,
+  imports: [BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatTableModule
-  ],
-  providers: [DotaUserService],
+    MatTableModule,
+    RouterModule.forRoot(routes)],
+  providers: [DotaHeroFetcherService,
+              PlayerInfoServiceService,
+              ProplayerService
+              ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-usertable></app-usertable>
+<nav><h3>
 
+  <a [routerLink]="['/']" routerLinkActive="active">Home</a>
+  <a [routerLink]= "['/herofetcher']" routerLinkActive="active">Hero info</a>
+  <a [routerLink]= "['/playerinfo']" routerLinkActive="active">Player Info</a>
+  <a [routerLink]= "['/proplayer']" routerLinkActive="active">Pro Players</a>
+</h3></nav>
+<router-outlet></router-outlet>
