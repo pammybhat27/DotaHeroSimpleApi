@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import {HomeComponent} from 'app/home/home.component';
 import { HeroFetcherComponent } from 'app/components/herofetcher/herofetcher.component';
-import {PlayerinfoComponent} from "./playerinfo/playerinfo.component";
-import {ProplayerComponent} from "./proplayer/proplayer.component";
+import {PlayerinfoComponent} from "./components/playerinfo/playerinfo.component";
+import {ProplayerComponent} from "./components/proplayer/proplayer.component";
 
 
 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ProplayerService} from '../services/proplayer.service';
+import {ProplayerService} from '../../services/proplayer.service';
 import {DataSource} from '@angular/cdk/collections';
 import {Observable} from 'rxjs/Observable';
-import {DotaProPlayerModel} from '../model/dotaProPlayer.model';
+import {DotaProPlayerModel} from '../../model/dotaProPlayer.model';
 
 @Component({
   selector: 'app-proplayer',

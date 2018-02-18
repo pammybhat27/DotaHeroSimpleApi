@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Routes} from '@angular/router';
 import {HeroFetcherComponent} from './components/herofetcher/herofetcher.component';
-import {PlayerinfoComponent} from "./playerinfo/playerinfo.component";
+import {PlayerinfoComponent} from "./components/playerinfo/playerinfo.component";
 
 
 @Component({

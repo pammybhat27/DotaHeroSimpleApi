@@ -11,10 +11,10 @@ import { RouterModule, Routes  } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import {routes} from './app.routes';
 import {PlayerInfoServiceService} from './services/player-info-service.service';
-import {PlayerinfoComponent} from './playerinfo/playerinfo.component';
+import {PlayerinfoComponent} from './components/playerinfo/playerinfo.component';
 import {DotaPlayerInfoModel} from './model/dotaPlayerInfo.model';
 import {ProplayerService} from './services/proplayer.service';
-import {ProplayerComponent} from './proplayer/proplayer.component';
+import {ProplayerComponent} from './components/proplayer/proplayer.component';
 
 @NgModule(<NgModule>{
   declarations: [AppComponent,

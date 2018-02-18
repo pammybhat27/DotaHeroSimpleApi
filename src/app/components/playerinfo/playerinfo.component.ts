@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PlayerInfoServiceService} from '../services/player-info-service.service';
-import {DotaPlayerInfoModel} from '../model/dotaPlayerInfo.model';
+import {PlayerInfoServiceService} from '../../services/player-info-service.service';
+import {DotaPlayerInfoModel} from '../../model/dotaPlayerInfo.model';
 
 @Component({
   selector: 'app-playerinfo',
