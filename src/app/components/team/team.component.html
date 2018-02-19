@@ -1,0 +1,39 @@
+<div>
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="team_id">
+      <mat-header-cell *matHeaderCellDef> team_id </mat-header-cell>
+      <mat-cell *matCellDef="let DotaTeamModel"> {{DotaTeamModel.team_id}}" </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="logo_url">
+      <mat-header-cell *matHeaderCellDef> logo_url </mat-header-cell>
+      <mat-cell *matCellDef="let DotaTeamModel"><img src ="{{DotaTeamModel.logo_url}}" /> </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="rating">
+      <mat-header-cell *matHeaderCellDef> Rating  </mat-header-cell>
+      <mat-cell *matCellDef="let DotaTeamModel"> {{DotaTeamModel.rating}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="wins">
+      <mat-header-cell *matHeaderCellDef> Wins </mat-header-cell>
+      <mat-cell *matCellDef="let DotaTeamModel"> {{ DotaTeamModel.wins}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="losses">
+      <mat-header-cell *matHeaderCellDef> losses </mat-header-cell>
+      <mat-cell *matCellDef="let DotaTeamModel"> {{ DotaTeamModel.name}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> name </mat-header-cell>
+      <mat-cell *matCellDef="let DotaTeamModel"> {{ DotaTeamModel.name}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="tag">
+      <mat-header-cell *matHeaderCellDef> tag </mat-header-cell>
+      <mat-cell *matCellDef="let DotaTeamModel"> {{ DotaTeamModel.tag}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="last_match_time">
+      <mat-header-cell *matHeaderCellDef> last_match_time </mat-header-cell>
+      <mat-cell *matCellDef="let DotaTeamModel"> {{ DotaTeamModel.last_match_time}}  </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
+

@@ -15,14 +15,20 @@ import {PlayerinfoComponent} from './components/playerinfo/playerinfo.component'
 import {DotaPlayerInfoModel} from './model/dotaPlayerInfo.model';
 import {ProplayerService} from './services/proplayer.service';
 import {ProplayerComponent} from './components/proplayer/proplayer.component';
+import {DotateamService} from './services/dotateam.service';
+import {DotaTeamModel} from './model/dotaTeam.model';
+import {TeamComponent} from './components/team/team.component';
+import {LeagueComponent} from './components/league/league.component';
+import {DotaleagueService} from './services/dotaleague.service';
 
 @NgModule(<NgModule>{
   declarations: [AppComponent,
     HeroFetcherComponent,
     HomeComponent,
     PlayerinfoComponent,
-    ProplayerComponent
-
+    ProplayerComponent,
+    TeamComponent,
+    LeagueComponent
 
   ],
   imports: [BrowserModule,
@@ -32,7 +38,9 @@ import {ProplayerComponent} from './components/proplayer/proplayer.component';
     RouterModule.forRoot(routes)],
   providers: [DotaHeroFetcherService,
               PlayerInfoServiceService,
-              ProplayerService
+              ProplayerService,
+              DotateamService,
+              DotaleagueService
               ],
   bootstrap: [AppComponent]
 })
