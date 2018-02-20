@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import {DataSource} from '@angular/cdk/collections';
 import {DotaHero} from '../../model/dotaHero.model';
+import {NgxSpinnerComponent, NgxSpinnerService} from "ngx-spinner";
 
 @Component({
   selector: 'app-herofetcher',
@@ -13,10 +14,18 @@ import {DotaHero} from '../../model/dotaHero.model';
 export class HeroFetcherComponent implements OnInit {
 
   dataSource = new UserDataSource(this.userService);
-  displayedColumns = ['ID', 'Name', 'Localized Name', 'Primary Attribute', 'Attack Type', 'Legs', 'Roles'];
-  constructor(private userService: DotaHeroFetcherService) { }
+  displayedColumns = ['ID', 'Primary Attribute', 'Attack Type', 'Legs', 'Roles'];
+  constructor(private userService: DotaHeroFetcherService , private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
+    this.spinner.show();
+
+
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 10000);
+
   }
 }
 

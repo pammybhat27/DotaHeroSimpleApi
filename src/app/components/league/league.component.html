@@ -1,23 +1,21 @@
+<ngx-spinner></ngx-spinner>
 <div>
   <mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="leagueid">
-      <mat-header-cell *matHeaderCellDef> leagueid </mat-header-cell>
-      <mat-cell *matCellDef="let DotaLeagueModel"> {{DotaLeagueModel.leagueid}}" </mat-cell>
+      <mat-header-cell *matHeaderCellDef> LEAGUE ID </mat-header-cell>
+      <mat-cell *matCellDef="let DotaLeagueModel"> {{DotaLeagueModel.leagueid}}</mat-cell>
     </ng-container>
-    <ng-container matColumnDef="ticket">
-      <mat-header-cell *matHeaderCellDef> ticket </mat-header-cell>
-      <mat-cell *matCellDef="let DotaLeagueModel">{{DotaLeagueModel.ticket}}</mat-cell>
-    </ng-container>
+
     <ng-container matColumnDef="banner">
-      <mat-header-cell *matHeaderCellDef> banner </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> BANNER </mat-header-cell>
       <mat-cell *matCellDef="let DotaLeagueModel"> {{DotaLeagueModel.banner}}  </mat-cell>
     </ng-container>
     <ng-container matColumnDef="tier">
-      <mat-header-cell *matHeaderCellDef> tier </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> TIER </mat-header-cell>
       <mat-cell *matCellDef="let DotaLeagueModel"> {{ DotaLeagueModel.tier}}  </mat-cell>
     </ng-container>
     <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef> name </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> NAME </mat-header-cell>
       <mat-cell *matCellDef="let DotaLeagueModel"> {{ DotaLeagueModel.name}}  </mat-cell>
     </ng-container>
 

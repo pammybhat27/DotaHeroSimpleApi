@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import {Routes} from '@angular/router';
-import {HeroFetcherComponent} from './components/herofetcher/herofetcher.component';
-import {PlayerinfoComponent} from "./components/playerinfo/playerinfo.component";
+import {Component, OnInit} from '@angular/core';
+import { Routes } from '@angular/router';
+import { HeroFetcherComponent } from './components/herofetcher/herofetcher.component';
+import { PlayerinfoComponent } from './components/playerinfo/playerinfo.component';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 @Component({
@@ -9,9 +10,17 @@ import {PlayerinfoComponent} from "./components/playerinfo/playerinfo.component"
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app';
-}
+export class AppComponent  {
+
+
+  }
+
+
+
+
+
+
+
 
 
 const appRoutes: Routes = [

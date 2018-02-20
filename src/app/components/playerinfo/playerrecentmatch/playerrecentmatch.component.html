@@ -1,0 +1,48 @@
+<div>
+
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="match_id">
+      <mat-header-cell *matHeaderCellDef> MATCH ID </mat-header-cell>
+      <mat-cell *matCellDef="let DotaRecentPlayerMatchesModel"> {{DotaRecentPlayerMatchesModel.match_id}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="duration">
+      <mat-header-cell *matHeaderCellDef> DURATION </mat-header-cell>
+      <mat-cell *matCellDef="let DotaRecentPlayerMatchesModel"> {{ DotaRecentPlayerMatchesModel.duration}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="game_mode">
+      <mat-header-cell *matHeaderCellDef> GAME MODE </mat-header-cell>
+      <mat-cell *matCellDef="let DotaRecentPlayerMatchesModel"> {{ DotaRecentPlayerMatchesModel.game_mode}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="lobby_type">
+      <mat-header-cell *matHeaderCellDef> LOBBY TYPE </mat-header-cell>
+      <mat-cell *matCellDef="let DotaRecentPlayerMatchesModel"> {{ DotaRecentPlayerMatchesModel.lobby_type}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="hero_id">
+      <mat-header-cell *matHeaderCellDef> HERO ID </mat-header-cell>
+      <mat-cell *matCellDef="let DotaRecentPlayerMatchesModel"> {{ DotaRecentPlayerMatchesModel.hero_id}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="version">
+      <mat-header-cell *matHeaderCellDef> VERSION </mat-header-cell>
+      <mat-cell *matCellDef="let DotaRecentPlayerMatchesModel"> {{ DotaRecentPlayerMatchesModel.version}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="kills">
+      <mat-header-cell *matHeaderCellDef> KILLS </mat-header-cell>
+      <mat-cell *matCellDef="let DotaRecentPlayerMatchesModel"> {{ DotaRecentPlayerMatchesModel.kills}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="deaths">
+      <mat-header-cell *matHeaderCellDef> DEATHS </mat-header-cell>
+      <mat-cell *matCellDef="let DotaRecentPlayerMatchesModel"> {{ DotaRecentPlayerMatchesModel.deaths}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="assists">
+      <mat-header-cell *matHeaderCellDef> ASSISTS </mat-header-cell>
+      <mat-cell *matCellDef="let DotaRecentPlayerMatchesModel"> {{ DotaRecentPlayerMatchesModel.assists}}  </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="skill">
+      <mat-header-cell *matHeaderCellDef> SKILL </mat-header-cell>
+      <mat-cell *matCellDef="let DotaRecentPlayerMatchesModel"> {{ DotaRecentPlayerMatchesModel.skill}}  </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

@@ -1,20 +1,43 @@
+<ngx-spinner></ngx-spinner>
+
 <table  border='1' align="center" width='70%'>
   <tbody>
   <tr bgcolor="aqua">
-    <td>PersonName</td>
-    <td>Avatar</td>
-    <td>Profile Url</td>
-    <td>Location Code</td>
+    <td>PERSON NAME</td>
+    <td>AVATAR</td>
+    <td>PROFILE URL </td>
+    <td>LOCATION CODE</td>
   </tr>
   <tr>
     <td> {{playersInfos.profile.personaname}} </td>
     <td>   <img src = "{{playersInfos.profile.avatar}}"/>
 
     </td>
-    <td>{{playersInfos.profile.profileurl}}
+    <td> <a href="{{playersInfos.profile.profileurl}}">PlayerProfile</a>
     </td>
     <td>{{playersInfos.profile.loccountrycode}}
     </td>
   </tr>
   </tbody>
 </table>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<a [routerLink]= "['./playerwin']" routerLinkActive="active">PlayerWin</a>
+<a [routerLink]= "['./playerrecentmatch']" routerLinkActive="active">Player Recent Matches</a>
+
+
+<router-outlet></router-outlet>
+
+
+<br/>
+<br/>

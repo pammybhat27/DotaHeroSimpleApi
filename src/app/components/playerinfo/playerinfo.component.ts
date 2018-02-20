@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PlayerInfoServiceService} from '../../services/player-info-service.service';
 import {DotaPlayerInfoModel} from '../../model/dotaPlayerInfo.model';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-playerinfo',
@@ -10,12 +11,15 @@ import {DotaPlayerInfoModel} from '../../model/dotaPlayerInfo.model';
 export class PlayerinfoComponent implements OnInit {
 
   playersInfos: DotaPlayerInfoModel[] = [];
+
   constructor(playerInfo: PlayerInfoServiceService) {
 
     playerInfo.getPlayerInfoData().subscribe(b => this.playersInfos = b);
   }
 
-  ngOnInit() {
-  }
+  spinner: NgxSpinnerService
 
+  ngOnInit() {
+
+  }
 }

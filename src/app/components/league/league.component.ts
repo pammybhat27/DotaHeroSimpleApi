@@ -3,6 +3,7 @@ import {DotaleagueService} from '../../services/dotaleague.service';
 import {DataSource} from '@angular/cdk/collections';
 import {Observable} from 'rxjs/Observable';
 import {DotaLeagueModel} from '../../model/dotaLeague.model';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-league',
@@ -11,10 +12,18 @@ import {DotaLeagueModel} from '../../model/dotaLeague.model';
 })
 export class LeagueComponent implements OnInit {
   dataSource = new LeagueDataSource(this.leagueService);
-  displayedColumns = ['leagueid', 'ticket', 'banner', 'tier', 'name'];
-  constructor( private leagueService: DotaleagueService) { }
+  displayedColumns = ['leagueid', 'banner', 'tier', 'name'];
+  constructor( private leagueService: DotaleagueService, private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
+    this.spinner.show();
+
+
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 10000);
+
   }
 
 }
