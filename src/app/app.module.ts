@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatTableModule } from '@angular/material';
+import {
+  MatAutocompleteModule, MatButtonModule, MatCheckboxModule, MatInputModule, MatSliderModule, MatSort, MatSortable,
+  MatTableModule
+} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeroFetcherComponent } from './components/herofetcher/herofetcher.component';
@@ -24,7 +27,10 @@ import {PlayerstatisticsService} from './services/playerstatistics.service';
 import {PlayerwinComponent} from './components/playerinfo/playerwin/playerwin.component';
 import { RecentplayermatchesService } from './services/recentplayermatches.service';
 import {PlayerrecentmatchComponent} from './components/playerinfo/playerrecentmatch/playerrecentmatch.component';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ProplayerautocompleteComponent} from './components/proplayerautocomplete/proplayerautocomplete.component';
+import {ProplayersortingComponent} from './components/proplayersorting/proplayersorting.component';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule(<NgModule>{
   declarations: [AppComponent,
@@ -35,7 +41,10 @@ import {PlayerrecentmatchComponent} from './components/playerinfo/playerrecentma
     TeamComponent,
     LeagueComponent,
     PlayerwinComponent,
-    PlayerrecentmatchComponent
+    PlayerrecentmatchComponent,
+    ProplayerautocompleteComponent,
+    ProplayersortingComponent
+
 
   ],
   imports: [
@@ -44,7 +53,16 @@ import {PlayerrecentmatchComponent} from './components/playerinfo/playerrecentma
     HttpClientModule,
     MatTableModule,
     RouterModule.forRoot(routes),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatAutocompleteModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSliderModule,
+    MatSortModule
+
   ],
   providers: [
     DotaHeroFetcherService,

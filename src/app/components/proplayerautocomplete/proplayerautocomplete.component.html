@@ -1,0 +1,22 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <p>AutoComplete of proplayers in action</p>
+    <input matInput placeholder="ProPlayer" aria-label="ProPlayer" [matAutocomplete]="auto" [formControl]="stateCtrl">
+<hr/>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let proplayerdetails of filteredOptions | async" [value]="proplayerdetails.name">
+        <img style="vertical-align:middle;" aria-hidden src="{{proplayerdetails.avatar}}" height="35" />
+        <span>{{ proplayerdetails.name }}</span> |
+        <small>PersonName: {{proplayerdetails.personaname}}</small>|
+        <small>AccountID: {{proplayerdetails.account_id}}</small>|
+        <small>Team : {{proplayerdetails.team_name}}</small>|
+      </mat-option>
+
+
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <br />
+
+
+</form>

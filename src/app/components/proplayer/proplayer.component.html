@@ -1,7 +1,10 @@
 <ngx-spinner></ngx-spinner>
 <div>
 
+
+
   <mat-table [dataSource]="dataSource">
+
     <ng-container matColumnDef="Account_id">
       <mat-header-cell *matHeaderCellDef> Account ID </mat-header-cell>
       <mat-cell *matCellDef="let DotaProPlayerModel"> {{DotaProPlayerModel.account_id}}" </mat-cell>

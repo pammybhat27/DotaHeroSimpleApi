@@ -1,0 +1,19 @@
+
+<table matSort (matSortChange)="sortData($event)">
+  <tr>
+    <th mat-sort-header="name">Name</th>
+    <th mat-sort-header="account_id">Account ID</th>
+    <th mat-sort-header="country_code">Country Code (g)</th>
+    <th mat-sort-header="personaname">Person Name (g)</th>
+    <th mat-sort-header="team_name">Team Name (g)</th>
+  </tr>
+
+  <tr *ngFor="let dessert of sortedData">
+    <td>{{dessert.name}}</td>
+    <td>{{dessert.account_id}}</td>
+    <td>{{dessert.country_code}}</td>
+    <td>{{dessert.personaname}}</td>
+    <td>{{dessert.team_name}}</td>
+  </tr>
+</table>
+
