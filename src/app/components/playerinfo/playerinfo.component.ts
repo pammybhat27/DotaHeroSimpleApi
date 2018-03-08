@@ -17,7 +17,7 @@ export class PlayerinfoComponent implements OnInit {
     playerInfo.getPlayerInfoData().subscribe(b => this.playersInfos = b);
   }
 
-  spinner: NgxSpinnerService
+  spinner: NgxSpinnerService;
 
   ngOnInit() {
 

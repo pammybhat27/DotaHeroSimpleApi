@@ -3,6 +3,7 @@
     <p>AutoComplete of proplayers in action</p>
     <input matInput placeholder="ProPlayer" aria-label="ProPlayer" [matAutocomplete]="auto" [formControl]="stateCtrl">
 <hr/>
+
     <mat-autocomplete #auto="matAutocomplete">
       <mat-option *ngFor="let proplayerdetails of filteredOptions | async" [value]="proplayerdetails.name">
         <img style="vertical-align:middle;" aria-hidden src="{{proplayerdetails.avatar}}" height="35" />

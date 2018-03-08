@@ -32,6 +32,7 @@ import {ProplayerautocompleteComponent} from './components/proplayerautocomplete
 import {ProplayersortingComponent} from './components/proplayersorting/proplayersorting.component';
 import {MatSortModule} from '@angular/material/sort';
 
+
 @NgModule(<NgModule>{
   declarations: [AppComponent,
     HeroFetcherComponent,
@@ -72,6 +73,7 @@ import {MatSortModule} from '@angular/material/sort';
     DotaleagueService,
     PlayerstatisticsService,
     RecentplayermatchesService,
+
 
               ],
   bootstrap: [AppComponent]

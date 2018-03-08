@@ -8,7 +8,9 @@ import {LeagueComponent} from './components/league/league.component';
 import {PlayerwinComponent} from './components/playerinfo/playerwin/playerwin.component';
 import {PlayerrecentmatchComponent} from './components/playerinfo/playerrecentmatch/playerrecentmatch.component';
 import {ProplayerautocompleteComponent} from './components/proplayerautocomplete/proplayerautocomplete.component';
-import {ProplayersortingComponent} from "./components/proplayersorting/proplayersorting.component";
+import {ProplayersortingComponent} from './components/proplayersorting/proplayersorting.component';
+
+
 
 
 
@@ -25,7 +27,9 @@ export const routes: Routes = [
   {path: 'team', component: TeamComponent},
   {path: 'league', component: LeagueComponent},
   {path: 'proplayerautocomplete', component: ProplayerautocompleteComponent},
-  {path: 'proplayersorting', component: ProplayersortingComponent}
+  {path: 'proplayersorting', component: ProplayersortingComponent},
+
+
 ];
 
 // { path: '', component: ParentComponent, children: [
